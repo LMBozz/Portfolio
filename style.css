@@ -210,6 +210,8 @@ a:hover {
 }
 
 .knockoutimg {
+    background-image: url("img/knockout.jpg");
+    background-repeat: no-repeat;
     position: absolute;
     height: 50vh;
     width: 80vw;
