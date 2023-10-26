@@ -199,20 +199,20 @@ a:hover {
     height: 100vh;
 }
 
-.knockoutAbout {
-    font-family: 'Kanit', sans-serif;
-    font-size: 15vw;
+.aboutTitle {
+    padding-top: 5vh;
+    font-size: 9vw;
     text-align: center;
     color: #000;
-    background: #FFF;
-    padding: 0 0 35vh 0;
-    mix-blend-mode: lighten;
 }
 
-.knockoutimg {
-    position: absolute;
-    height: 35vh;
-    width: 80vw;
-    top: 105vh;
-    left: 10vw;
+.aboutItemsCont {
+    text-align: center;
+    margin-top: 10vh;
+}
+
+.aboutItems {
+    display: inline-block;
+    text-align: left;
+    font-size: 2vw;
 }
