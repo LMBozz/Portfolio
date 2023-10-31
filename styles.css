@@ -85,31 +85,40 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;  
+  height: 100vh;
 }
 
 .content {
-  translate: 0px -150px;
+  translate: 0px -10vh;
+  position: relative;
 }
 
 .subContent {
   position: absolute;
+  translate: 0px -2vh;
+
+  left: 0; 
+  right: 0; 
+  margin-left: auto; 
+  margin-right: auto; 
+  width: 50vw;
+  text-align: center;
 }
 
 .content h2 b{
   -webkit-text-fill-color: transparent;
-  -webkit-text-stroke-width: 3px;
+  -webkit-text-stroke-width: 0.2vw;
   -webkit-text-stroke-color: #fff;
   font-family: 'Roboto', sans-serif;
-  font-size: 700%;
+  font-size: 13vw;
 }
 
 .subContent h2 b{
   -webkit-text-fill-color: transparent;
-  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-width: 0.05vw;
   -webkit-text-stroke-color: #fff;
   font-family: 'Roboto', sans-serif;
-  font-size: 200%;
+  font-size: 3.5vw;
 }
 
 @keyframes animate{
@@ -128,19 +137,30 @@ body {
   }
 }
 
-ul {
-  position: absolute;
+
+
+.nav-cont {
+  display: flex;
   list-style-type: none;
+  justify-content: center;
+  flex-wrap: wrap;
+
   margin: 0;
   padding: 0;
   padding-top: 35px;
-  margin-right: 100px;
+
   overflow: hidden;
-  right: 0px;
+
+  position: absolute;
+  left: 0; 
+  right: 0; 
+  margin-left: auto; 
+  margin-right: auto; 
+  width: 100vw;
 }
 
-li {
-  float: right;
+.nav-item {
+  padding: 1.5em;
 }
 
 li a {
@@ -149,15 +169,16 @@ li a {
   text-align: center;
   text-decoration: none;
 
-  margin-left: 50px;
+  margin-left: 2vw;
+  margin-right: 2vw;
 
   font-family: 'Roboto', sans-serif;
-  font-size: 120%;
+  font-size: 1.75vw;
   border-bottom: rgba(255, 255, 255, 1);
   transition: font-size 250ms;
 }
 
 li a:hover {
-  font-size: 150%;
+  font-size: 2vw;
   transition: font-size 250ms;
 }
