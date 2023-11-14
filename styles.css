@@ -13,24 +13,9 @@ body {
   width: 50px;
   z-index: 1;
   background-color: #ffffff;
-  box-shadow: 0 0 50px #0072ff,
-              0 0 100px #0072ff,
-              0 0 150px #0072ff,
-              0 0 200px #0072ff;
+  box-shadow: 0 0 75px 15px #0072ff;
   animation: animate 10s linear infinite;
   transition: all 1s ease;
-}
-
-@media (hover: hover) and (pointer: fine) {
-  .wrapper span:hover {
-    background-color: rgb(255, 158, 255);
-
-    box-shadow: 0 0 50px #ff00ff,
-                0 0 100px #ff00ff,
-                0 0 150px #ff00ff,
-                0 0 200px #ff00ff;
-    transition: all 0.5s ease;
-  }
 }
 
 .wrapper span:nth-child(1){
@@ -139,8 +124,6 @@ body {
   }
 }
 
-
-
 .nav-cont {
   display: flex;
   list-style-type: none;
@@ -188,7 +171,7 @@ li a {
 }
 
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 790px) {
 
   .wrapper span{
     position: fixed;
@@ -197,10 +180,7 @@ li a {
     width: 50px;
     z-index: 1;
     background-color: #ffffff;
-    box-shadow: 0 0 50px #0072ff,
-                0 0 100px #0072ff,
-                0 0 150px #0072ff,
-                0 0 200px #0072ff;
+    box-shadow: 0 0 75px 15px #0072ff;
     animation: animate 9s linear infinite;
     transition: all 1s ease;
   }
