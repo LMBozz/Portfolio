@@ -3,7 +3,7 @@
 body {
   background: #111;
   height: 100vh;
-  overflow: hidden;
+  overflow-x: hidden;
 }
 
 .wrapper span{
@@ -11,7 +11,7 @@ body {
   bottom: -180px;
   height: 50px;
   width: 50px;
-  z-index: 1;
+  z-index: -5;
   background-color: #ffffff;
   box-shadow: 0 0 75px 15px #0072ff;
   animation: animate 10s linear infinite;
@@ -178,7 +178,7 @@ li a {
     bottom: -180px;
     height: 50px;
     width: 50px;
-    z-index: 1;
+    z-index: -5;
     background-color: #ffffff;
     box-shadow: 0 0 75px 15px #0072ff;
     animation: animate 9s linear infinite;
@@ -282,6 +282,7 @@ li a {
   .content {
     translate: 0px -10vh;
     position: relative;
+    text-align: center;
   }
   
   .subContent {
@@ -312,4 +313,21 @@ li a {
     font-size: 8vw;
   }
 
+  .project1 {
+    width: 70vw;
+  }
+
+}
+
+.project1 {
+  background-color: #fff;
+  width: 500px;
+  height: 120px;
+
+  left: 50%;
+  transform: translate(-50%);
+  translate: 0px 5vh;
+  position: relative;
+
+  z-index: 99;
 }
