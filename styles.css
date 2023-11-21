@@ -481,9 +481,8 @@ li a {
   }
   
   .content {
-    translate: 0px -10vh;
     position: relative;
-    text-align: center;
+    top: -125px;
   }
   
   .subContent {
