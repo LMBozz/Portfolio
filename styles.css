@@ -85,8 +85,8 @@ body {
 }
 
 .content {
-  translate: 0px -10vh;
   position: relative;
+  top: -125px;
 }
 
 .subContent {
