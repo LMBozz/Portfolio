@@ -1,4 +1,13 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;700&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+  color: #fff;
+  scroll-behavior: smooth;
+}
 
 body {
   background: #111;
@@ -82,8 +91,6 @@ body {
 
 .subContent {
   position: absolute;
-  translate: 0px -2vh;
-
   left: 0; 
   right: 0; 
   margin-left: auto; 
@@ -125,6 +132,8 @@ body {
 }
 
 .nav-cont {
+  position: fixed;
+
   display: flex;
   list-style-type: none;
   justify-content: center;
@@ -136,16 +145,19 @@ body {
 
   overflow: hidden;
 
-  position: absolute;
   left: 0; 
   right: 0; 
   margin-left: auto; 
   margin-right: auto; 
   width: 100vw;
+
+  z-index: 10;
 }
 
 .nav-item {
   padding: 1.5em;
+
+  z-index: 10;
 }
 
 li a {
@@ -161,6 +173,8 @@ li a {
   font-size: 1.75vw;
   border-bottom: rgba(255, 255, 255, 1);
   transition: font-size 250ms;
+
+  z-index: 10;
 }
 
 @media (hover: hover) and (pointer: fine) {
@@ -287,7 +301,7 @@ li a {
   
   .subContent {
     position: absolute;
-    translate: 0px -3vh;
+    translate: 0px 0px;
   
     left: 0; 
     right: 0; 
@@ -313,21 +327,182 @@ li a {
     font-size: 8vw;
   }
 
-  .project1 {
-    width: 70vw;
+  .nav-cont {
+    position: absolute;
   }
-
+  
 }
 
-.project1 {
-  background-color: #fff;
+.aboutMe {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+}
+
+.aboutMe h2 b {
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke-width: 0.2vw;
+  -webkit-text-stroke-color: #fff;
+  font-family: 'Roboto', sans-serif;
+  font-size: 10vw;
+}
+
+.aboutTextWrapper h2 b{
+  font-family: 'Roboto', sans-serif;
+  color: #fff;
+  font-size: 1.5vw;
+  font-weight: 200;
+}
+
+.aboutTextWrapper {
+  position: absolute;
+  left: 0; 
+  right: 0; 
+  margin-left: auto; 
+  margin-right: auto; 
+  margin-top: 50px;
+  width: 70vw;
+  text-align: center;
+}
+
+
+.skills {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 200px;
+  margin-top: 1000px;
+}
+
+.skills h2 b {
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke-width: 0.2vw;
+  -webkit-text-stroke-color: #fff;
+  font-family: 'Roboto', sans-serif;
+  font-size: 10vw;
+}
+
+.inner {
+  padding-top: 20px;
+}
+
+.container {
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 1rem 80px;
+  font-size: 1.2rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-flow: wrap;
+
+  width: 80vw;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.skills-box {
+  margin-top: 3vw;
+  padding: 1rem;
+  color: #ddd;
+  cursor: pointer;
   width: 500px;
-  height: 120px;
+}
 
-  left: 50%;
-  transform: translate(-50%);
-  translate: 0px 5vh;
+.skills-box:hover > .skill-title:after, .skills-box:hover > .skill-title:before {
+  width: 35px;
+}
+
+.skills-box:hover .img {
+  transform: translateY(-10px);
+}
+
+.skill-title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0.5rem;
+  margin-bottom: 0.5rem;
   position: relative;
+}
 
-  z-index: 99;
+.skill-title:after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  right: 50%;
+  width: 0;
+  height: 4px;
+  border-image-repeat: 2px 0 0 2px;
+  background-color: #fff;
+  transition: .5s;
+}
+
+.skill-title:before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 4px;
+  border-image-repeat: 0 2px 2px 0;
+  background-color: #fff;
+  transition: .5s;
+}
+
+.img {
+  width: 90px;
+  height: 90px;
+  position: relative;
+  border-radius: 45px;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: .5s;
+}
+
+.img:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 90px;
+  background-color: rgba(100, 100, 100, 0.25);
+  border-radius: 45px 0 0 45px;
+}
+
+.skill-title h3 {
+  color: #fff;
+  margin-top: 0.5rem;
+}
+
+.skill-icon {
+  width: 50px;
+  z-index: 2;
+}
+
+#about {
+  width: 500px;
+  height: 100px;
+  position: absolute;
+  transform: translateY(-300px);
+}
+
+#skills {
+  width: 500px;
+  height: 100px;
+  position: absolute;
+  transform: translateY(-225px);
+}
+
+#home {
+  width: 500px;
+  height: 100px;
+  position: absolute;
+  top: -500px;
 }
