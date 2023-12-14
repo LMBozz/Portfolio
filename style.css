@@ -1,0 +1,345 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body { 
+    font-family: 'Poppins', sans-serif;
+    --color1: #fff;
+    --color2: #d30831;
+
+    --carouselw: 80vw;
+    --carouselh: 600px;
+
+    overflow-x: hidden;
+    overflow-y: visible;
+}
+
+.nav-bar {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+    position: relative;
+    background-color: var(--color2);
+    padding: 12px 20px;
+}
+
+.logo {
+    color: #fff;
+    font-size: 2.2rem;
+    font-weight: bold;
+    margin-left: 4vw;
+}
+
+.menu {
+    display: flex;
+    margin-right: 4vw;
+}
+
+.menu li {
+    padding-left: 5vw;
+}
+
+.menu li a {
+    display: inline-block;
+    text-decoration: none;
+    color: var(--color1);
+    text-align: center;
+    transition: 0.15s ease-in-out;
+    position: relative;
+
+    font-weight: 500;
+    font-size: 1.2rem;
+}
+
+.menu a::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 100%;
+    height: 3px;
+    background-color: #fff;
+    border-radius: 5px;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.3s ease-in-out;
+}
+  
+.menu a:hover::before {
+    transform-origin: left;
+    transform: scaleX(1);
+}
+
+.open-menu , .close-menu {
+    position: absolute;
+    color: var(--color1);
+    cursor: pointer;
+    font-size: 1.5rem;
+    display: none;
+}
+
+.open-menu {
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+}
+
+.close-menu {
+    top: 20px;
+    right: 20px;
+}
+
+#check {
+    display: none;
+}
+
+.slider {
+    width: var(--carouselw);
+    height: var(--carouselh);
+    border-radius: 10px;
+    overflow: hidden;
+    position: absolute;
+    top: 120px;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+.slides {
+    width: 500%;
+    height: 500px;
+    display: flex;
+}
+
+.slides input {
+    display: none;
+}
+
+.slide {
+    width: 20%;
+    transition: 2s;
+}
+
+.slide img {
+    width: var(--carouselw);
+    height: var(--carouselh);
+    object-fit: cover;
+}
+
+.navigation-manual {
+    position: absolute;
+    width: var(--carouselw);
+    margin-top: 540px;
+    display: flex;
+    justify-content: center;
+}
+
+.manual-btn {
+    border: 2px solid #fff;
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 1s;
+}
+
+.manual-btn:not(:last-child) {
+    margin-right: 40px;
+}
+
+.manual-btn:hover {
+    background-color: #fff;
+}
+
+#radio1:checked ~ .first {
+    margin-left: 0;
+}
+  
+#radio2:checked ~ .first {
+    margin-left: -20%;
+}
+  
+#radio3:checked ~ .first {
+    margin-left: -40%;
+}
+  
+#radio4:checked ~ .first {
+    margin-left: -60%;
+}
+
+
+/* Automatic Carousel Navigation */
+
+.navigation-auto {
+    position: absolute;
+    display: flex;
+    width: var(--carouselw);
+    justify-content: center;
+    margin-top: 540px;
+}
+
+.navigation-auto div {
+    border: 2px solid #fff;
+    padding: 5px;
+    border-radius: 10px;
+    transition: 1s;
+}
+
+.navigation-auto div:not(:last-child) {
+    margin-right: 40px;
+}
+
+#radio1:checked ~ .navigation-auto .auto-btn1 {
+    background-color: #fff;
+}
+
+#radio2:checked ~ .navigation-auto .auto-btn2 {
+    background-color: #fff;
+}
+
+#radio3:checked ~ .navigation-auto .auto-btn3 {
+    background-color: #fff;
+}
+
+#radio4:checked ~ .navigation-auto .auto-btn4 {
+    background-color: #fff;
+}
+
+.quote {
+    position: absolute;
+    top: 790px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    text-align: center;
+}
+
+.join-btn {
+    position: relative;
+    left: 50%;
+    top: 780px;
+    transform: translate(-50%);
+
+    width: 200px;
+    height: 70px;
+
+    font: inherit;
+    font-size: 200%;
+    font-weight: 600;
+    color: var(--color1);
+    
+    background: var(--color2);
+    border: 0.1em solid var(--color1);
+    border-radius: 100vw;
+    cursor: pointer;
+    transition: background-color 250ms;
+
+    isolation: isolate;
+    overflow: hidden;
+}
+
+.join-btn:hover,
+.join-btn:focus-visible {
+    background: #9d0725;
+    color: #fff;
+}
+
+@media (max-width: 910px) {
+    .menu {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 40vw;
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        right: -100%;
+        z-index: 100;
+        background-color: var(--color2);
+        transition: all 0.2s ease-in-out;
+        margin-right: 0;
+    }
+
+    .menu li {
+        margin-top: 40px;
+        margin-right: 20px;
+    }
+
+    .menu li a{
+        padding: 10px;
+    }
+    
+    .open-menu , .close-menu {
+        display: block;
+    }
+
+    #check:checked ~ .menu {
+        right: 0;
+    }
+
+    .slidercontainer {
+        position: absolute;
+        height: 55vh;
+        width: 90vw;
+        top: 120px;
+        left: 50%;
+        transform: translate(-50%);
+    }
+
+    .slider {
+        width: var(--carouselw);
+        height: 40vh;
+        border-radius: 10px;
+        overflow: hidden;
+        position: absolute;
+        top: 120px;
+        left: 50%;
+        top: 40%;
+        transform: translate(-50%, -50%);
+    }
+
+    .navigation-manual {
+        position: absolute;
+        display: flex;
+        width: var(--carouselw);
+        justify-content: center;
+        margin-top: 36vh;
+    }
+
+    .navigation-auto {
+        position: absolute;
+        display: flex;
+        width: var(--carouselw);
+        justify-content: center;
+        margin-top: 36vh;
+    }
+
+    .quote {
+        position: fixed;
+        top: 60%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 20px;
+    }
+
+    .join-btn {
+        position: fixed;
+        top: 80%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        margin-top: 14vh;
+    }
+
+    .quotebtn {
+        position: absolute;
+        height: 20vh;
+        width: 90vw;
+        top: 100%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+}
