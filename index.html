@@ -1,103 +1,246 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Code Club</title>
-    <link rel="stylesheet" href="styles.css">
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+  <link rel="stylesheet" href="styles.css">
+  <title>HOME</title>
 </head>
 <body>
-    <header>
-        <ul class="nav-bar">
-            <li class="logo">CODE CLUB</li>
-            <input type="checkbox" id="check">
-            <span class="menu">
-                <li><a href="#home">HOME</a></li>
-                <li><a href="#about">ABOUT</a></li>
-                <li><a href="#join">JOIN</a></li>
-                <li><a href="#committee">COMMITTEE</a></li>
-                <li><a href="#contact">CONTACT</a></li>
-                <label for="check" class="close-menu"><i class="fas fa-times"></i></label>
-            </span>
-            <label for="check" class="open-menu"><i class="fas fa-bars"></i></label>
-        </ul>
-    </header>
 
-    <!-- Image Slider Start -->
-    <div class="slidercontainer">
-        <div class="slider">
-            <div class="slides">
-                <!-- Radio Buttons Start -->
-                <input type="radio" name="radio-btn" id="radio1">
-                <input type="radio" name="radio-btn" id="radio2">
-                <input type="radio" name="radio-btn" id="radio3">
-                <input type="radio" name="radio-btn" id="radio4">
-                <!--  Radio Buttons End  -->
+  <nav>
+    <ul class="nav-cont">
+      <li class="nav-item"><a href="#home">HOME</a></li>
+      <li class="nav-item"><a href="#about">ABOUT</a></li>
+      <li class="nav-item"><a href="#skills">SKILLS</a></li>      
+      <li class="nav-item"><a href="#current">CURRENT</a></li>
+      <li class="nav-item"><a href="#hobbies">HOBBIES</a></li>
+      <li class="nav-item"><a href="#projects">PROJECTS</a></li>
+    </ul>
+  </nav>
 
-                <!-- Slide Images Start -->
-                <div class="slide first">
-                    <img src="img/1.jpg" alt="">
-                </div>
-                <div class="slide">
-                    <img src="img/2.jpg" alt="">
-                </div>
-                <div class="slide">
-                    <img src="img/3.jpg" alt="">
-                </div>
-                <div class="slide">
-                    <img src="img/4.jpg" alt="">
-                </div>
-                <!--  Slide Images End  -->
+  <div class="wrapper">
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
 
-                <!-- Automatic Navigation Start -->
-                <div class="navigation-auto">
-                    <div class="auto-btn1"></div>
-                    <div class="auto-btn2"></div>
-                    <div class="auto-btn3"></div>
-                    <div class="auto-btn4"></div>
-                </div>
-                <!--  Automatic Navigation End  -->
-
-                <!-- Manual Navigation Start -->
-                <div class="navigation-manual">
-                    <label for="radio1" class="manual-btn"></label>
-                    <label for="radio2" class="manual-btn"></label>
-                    <label for="radio3" class="manual-btn"></label>
-                    <label for="radio4" class="manual-btn"></label>
-                </div>
-                <!--  Manual Navigation End  -->
-            </div>
-        </div>
-        <!--  Image Slider End  -->
-
-        <div class="quotebtn">
-            <div class="quote">
-                <p>"CODE CLUB helped me join code club and code during code club. This is obviously a placeholder quote. If you read this, you stink."</p>
-            </div>
-    
-            <button onclick="location.href='#home'" type="button" class="join-btn">
-                    Join!
-            </button> 
-        </div>
-        
+  <div id="home"></div>
+  <div class="banner">
+    <div class="content">
+      <h2>
+        <b>LUKE BOSWELL</b>
+      </h2>
+      <div class="subContent">
+        <h2>
+          <b>explore my mind</b>
+        </h2>
+      </div>
     </div>
-    
-    <!-- Auto Image Slider Script -->
-    <script type="text/javascript">
-        var counter = 1;
-        setInterval(function(){
-            document.getElementById('radio' + counter).checked = true;
-            counter++;
-            if(counter > 4){
-                counter = 1;
-            }
-        }, 5000);
-    </script>
-    <!-- Auto Image Slider Script -->
+  </div>
 
+  <div id="about"></div>
+  <div class="aboutMe">
+    <h2>
+      <b>About Me</b>
+    </h2>
+  </div>
+  <div class="aboutTextWrapper">
+    <h2>
+      <b>
+        My name is Luke. I am a student and aspiring developer.
+        I have been involved with computing and technology my entire life,
+        and have wanted to be a programmer for as long as I can remember.
+        Growing up with video games and computers, I spent a lot of my time
+        taking them apart and putting them back together countless times, and doing
+        so developed a skill and love for messing with technology.
+        <br><br>
+        I have a deep passion for anything computing, and simply
+        wish to spend the rest of my life with a career doing what
+        I both love and am good at.
+        <br><br>
+        In addition to programming, I have a deep-set interest in
+        Cryptography and Steganography. I regularly compete in CTF's
+        and online competitions, solving puzzles and breaking
+        encryptions. I'm also involved with many code golf and
+        competitive coding and problem solving communities online,
+        being ranked within the top 600 in the world on CodinGame.com
+        for Clash of Code!
+      </b>
+    </h2>
+  </div>
+
+    <div id="skills"></div>
+    <div class="skills">
+      <h2>
+        <b>My Skills</b>
+      </h2>
+    </div>
+    <div class="inner">
+      <div class="container">
+
+        <div class="skills-box">
+          <div class="skill-title">
+            <div class="img">
+              <img src="img/html.png" alt="HTML" class="skill-icon">
+            </div>
+            <h3>HTML 5</h3>
+          </div>
+          <p>
+            Having developed and been involved with various web development projects
+            over the past few years, I have become proficient with the use of HTML
+            to build engaging websites.
+          </p>
+        </div>
+
+        <div class="skills-box">
+          <div class="skill-title">
+            <div class="img">
+              <img src="img/css.png" alt="CSS" class="skill-icon">
+            </div>
+            <h3>CSS 3</h3>
+          </div>
+          <p>
+            Being experienced in web development, I have learned how to aptly use
+            and apply CSS in order to create visually appealing webpages and user-friendly
+            interfaces.
+          </p>
+        </div>
+
+        <div class="skills-box">
+          <div class="skill-title">
+            <div class="img">
+              <img src="img/cpp.png" alt="C++" class="skill-icon">
+            </div>
+            <h3>C++</h3>
+          </div>
+          <p>
+            Studying C++ in University, I have become somewhat talented in the realm
+            of software development and can design efficient application with great
+            focus on scalability and performance.
+          </p>
+        </div>
+
+        <div class="skills-box">
+          <div class="skill-title">
+            <div class="img">
+              <img src="img/python.png" alt="Python" class="skill-icon">
+            </div>
+            <h3>Python</h3>
+          </div>
+          <p>
+            With Python, I am able to tackle a wide range of diverse challenges,
+            from web applications to task automation and cyber-security.
+          </p>
+        </div>
+
+        <div class="skills-box">
+          <div class="skill-title">
+            <div class="img">
+              <img src="img/cryptography.png" alt="Cryptography" class="skill-icon">
+            </div>
+            <h3>Crpytography</h3>
+          </div>
+          <p>
+            Through extensive research, experience, personal projects, competing in CTF's,
+            penetration testing, and ethical hacking, I have become very familiar 
+            with the world of Cryptography and cyber-security.
+          </p>
+        </div>
+
+        <div class="skills-box">
+          <div class="skill-title">
+            <div class="img">
+              <img src="img/steg.png" alt="Steganography" class="skill-icon">
+            </div>
+            <h3>Steganography</h3>
+          </div>
+          <p>
+            Whilst proficient with Cryptography, my passion lies with Steganography.
+            Through exploration and active engagement with various online communities,
+            websites, and puzzles, I have susbstantial knowledge in regards to digital
+            forensics and steganography.
+          </p>
+        </div>
+      </div>
+    </div>
+
+  <div id="current"></div>
+  <div class="current">
+    <h2>
+      <b>Current</b>
+    </h2>
+  </div>
+  <div class="currentTextWrapper">
+    <h2>
+      <b>
+        Currently, I am in the first year of completing a
+        Bachelors in Computer Science at the University of
+        South Wales.
+        <br><br>
+        I am also doing freelance web design in my spare time
+        outside of my assignments. As you can see, this
+        portfolio is an example of my web design skills.
+        <br><br>
+        In addition to this, I also help run the Coding Society
+        and Code Club in the University.
+      </b>
+    </h2>
+  </div>
+
+  <div id="hobbies"></div>
+  <div class="hobbies">
+    <h2>
+      <b>Hobbies</b>
+    </h2>
+  </div>
+  <div class="hobbiesTextWrapper">
+    <h2>
+      <b>
+        My hobbies include web design, game development,
+        competing in CTF's, steganography, making music,
+        competitive coding, and code golf; at one point
+        being ranked globally in the top 650 (currently
+        top 1,000) in Clash of Code on codingame.com.
+        <br><br>
+        I also enjoy learning new languages (both programming
+        and spoken) and graphic design.
+      </b>
+    </h2>
+  </div>
+
+  <div id="projects"></div>
+  <div class="projects">
+    <h2>
+      <b>Projects</b>
+    </h2>
+  </div>
+  <div class="projectsTextWrapper">
+    <h2>
+      <b>
+        Currently, the only project I can show would be the
+        website you are currently viewing; my website.
+        <br><br>
+        This portfolio showcases my ability to design
+        and build a functional website frontend.
+        I have made sure that my experience and skills with
+        both CSS and HTML have been utilised in some way
+        throughout the development of this webpage.
+        <br><br>
+        Hopefully, you enjoy visitiing it just as much
+        as I enjoyed creating it.
+        <br><br>
+        Thank you for visiting!
+      </b>
+    </h2>
+  </div>
 
 </body>
 </html>
